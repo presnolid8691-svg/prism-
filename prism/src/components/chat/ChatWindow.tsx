@@ -75,7 +75,7 @@ function isSameDay(a: Timestamp | null, b: Timestamp | null): boolean {
 
 export function ChatWindow({ chatId, onBack }: ChatWindowProps) {
   const { user } = useAuthStore()
-  const { optimisticMessages, addOptimisticMessage, removeOptimisticMessage } = useChatStore()
+  const { optimisticMessages, addOptimisticMessage } = useChatStore()
 
   const [chat, setChat] = useState<Chat | null>(null)
   const [messages, setMessages] = useState<Message[]>([])
