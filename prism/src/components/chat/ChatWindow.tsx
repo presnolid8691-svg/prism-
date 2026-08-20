@@ -37,7 +37,6 @@ import {
   MoreVertical,
   Images,
   ArrowLeft,
-  Info,
 } from 'lucide-react'
 import {
   DropdownMenu,

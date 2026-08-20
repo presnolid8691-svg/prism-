@@ -10,6 +10,7 @@ interface ChatState {
   setSelectedChatId: (chatId: string | null) => void
 
   addOptimisticMessage: (chatId: string, msg: Message) => void
+  removeOptimisticMessage: (chatId: string, localId: string) => void
   confirmOptimisticMessage: (chatId: string, localId: string, realMessage: Message) => void
   failOptimisticMessage: (chatId: string, localId: string) => void
   clearOptimisticMessages: (chatId: string) => void
@@ -33,6 +34,14 @@ export const useChatStore = create<ChatState>()((set) => ({
       optimisticMessages: {
         ...state.optimisticMessages,
         [chatId]: [...(state.optimisticMessages[chatId] ?? []), msg],
+      },
+    })),
+
+  removeOptimisticMessage: (chatId, localId) =>
+    set((state) => ({
+      optimisticMessages: {
+        ...state.optimisticMessages,
+        [chatId]: (state.optimisticMessages[chatId] ?? []).filter((m) => m.localId !== localId),
       },
     })),
 
