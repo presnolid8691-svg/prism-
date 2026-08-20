@@ -7,9 +7,9 @@
                     "build":  "next build",
                     "start":  "next start",
                     "lint":  "next lint",
-                    "build:electron":  "next build && electron-builder --win",
-                    "build:mobile":  "next build && npx cap sync android && npx cap open android",
-                    "electron:dev":  "concurrently \"next dev\" \"wait-on http://localhost:3000 && electron electron/main.js\""
+                    "build:electron":  "next build \u0026\u0026 electron-builder --win",
+                    "build:mobile":  "next build \u0026\u0026 npx cap sync android \u0026\u0026 npx cap open android",
+                    "electron:dev":  "concurrently \"next dev\" \"wait-on http://localhost:3000 \u0026\u0026 electron electron/main.js\""
                 },
     "dependencies":  {
                          "@capacitor/android":  "^6.0.0",
@@ -46,7 +46,8 @@
                          "tailwind-merge":  "^2.5.0",
                          "tailwindcss-animate":  "^1.0.7",
                          "wavesurfer.js":  "^7.8.0",
-                         "zustand":  "^5.0.0"
+                         "zustand":  "^5.0.0",
+                         "date-fns":  "^3.6.0"
                      },
     "devDependencies":  {
                             "@capacitor/cli":  "^6.0.0",
@@ -63,4 +64,3 @@
                             "wait-on":  "^8.0.0"
                         }
 }
-
