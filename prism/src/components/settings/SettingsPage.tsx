@@ -4,10 +4,11 @@ import { NotificationSettings } from './NotificationSettings'
 import { AppearanceSettings } from './AppearanceSettings'
 import { PrivacySettings } from './PrivacySettings'
 import { AdvancedSettings } from './AdvancedSettings'
+import { AIFeaturesSettings } from './AIFeaturesSettings'
 import { SessionManager } from './SessionManager'
 import { DownloadHub } from './DownloadHub'
-import { cn } from '@/lib/utils'
-import { Bell, Palette, Shield, Settings, Monitor, Download } from 'lucide-react'
+import { cn } from '@/lib/utils/cn'
+import { Bell, Palette, Shield, Settings, Monitor, Download, Sparkles } from 'lucide-react'
 
 const SETTINGS_TABS = [
   { id: 'appearance', label: 'Appearance', icon: Palette, component: AppearanceSettings },
@@ -15,6 +16,7 @@ const SETTINGS_TABS = [
   { id: 'privacy', label: 'Privacy', icon: Shield, component: PrivacySettings },
   { id: 'sessions', label: 'Sessions', icon: Monitor, component: SessionManager },
   { id: 'downloads', label: 'Downloads', icon: Download, component: DownloadHub },
+  { id: 'ai_features', label: 'AI Features', icon: Sparkles, component: AIFeaturesSettings },
   { id: 'advanced', label: 'Advanced', icon: Settings, component: AdvancedSettings },
 ]
 
