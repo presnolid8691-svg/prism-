@@ -80,7 +80,7 @@ export function NotificationCenter() {
       async (snap) => {
         const list: NotificationItem[] = snap.docs.map((d) => ({
           id: d.id,
-          ...d.data(),
+          ...(d.data() as any),
         }))
 
         setNotifications(list)
@@ -423,3 +423,4 @@ export function NotificationCenter() {
     </div>
   )
 }
+
