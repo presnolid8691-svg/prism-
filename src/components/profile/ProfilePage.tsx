@@ -16,7 +16,7 @@ export function ProfilePage({ userId }: { userId?: string }) {
       <h1 className="text-3xl font-bold mb-8">Profile</h1>
       <div className="flex items-center gap-6 mb-8 bg-white dark:bg-zinc-950 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800">
         <Avatar className="w-24 h-24">
-          <AvatarImage src={user.avatarUrl || ''} />
+          <AvatarImage src={user.photoURL || ''} />
           <AvatarFallback className="text-2xl">{user.displayName?.charAt(0) || 'U'}</AvatarFallback>
         </Avatar>
         <div>
@@ -33,3 +33,4 @@ export function ProfilePage({ userId }: { userId?: string }) {
     </div>
   )
 }
+
