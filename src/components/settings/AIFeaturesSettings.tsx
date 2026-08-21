@@ -136,7 +136,7 @@ export function AIFeaturesSettings() {
             <h3 className="text-base font-medium">Auto-Delete Timer (Hours)</h3>
             <p className="text-sm text-zinc-500">Automatically wipe ephemeral messages.</p>
           </div>
-          <Slider defaultValue={[24]} min={1} max={72} step={1} />
+          <Slider defaultValue="24" min="1" max="72" step="1" />
         </div>
 
         {/* Feature 15 */}
@@ -291,3 +291,4 @@ export function AIFeaturesSettings() {
     </div>
   )
 }
+
