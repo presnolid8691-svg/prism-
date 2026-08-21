@@ -82,7 +82,7 @@ export function StoriesReel() {
 
   return (
     <>
-      <ScrollArea className="w-full" orientation="horizontal">
+      <ScrollArea className="w-full whitespace-nowrap">
         <div className="flex items-center gap-4 px-4 py-3">
           {/* Own story */}
           <button
@@ -154,3 +154,4 @@ export function StoriesReel() {
     </>
   )
 }
+
